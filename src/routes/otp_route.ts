@@ -7,7 +7,6 @@ export const routes = Router()
 routes.post('/sendotp', async (req: Request, res: Response) => {
     const OTP_TOKEN = process.env.OTP_TOKEN
     const phoneNo: String = await _.get(req, ['body', 'phone_no'])
-    console.log(phoneNo);
 
     const data = JSON.stringify({
         "msisdn": phoneNo,
